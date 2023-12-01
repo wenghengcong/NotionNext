@@ -20,8 +20,8 @@ const CONFIG = {
 
   // 英雄区显示三个置顶分类
   HEO_HERO_CATEGORY_1: { title: '我的作品', url: '/tag/作品' },
-  HEO_HERO_CATEGORY_2: { title: '热门文章', url: '/tag/热门' },
-  HEO_HERO_CATEGORY_3: { title: '必看精选', url: '/tag/精选' },
+  HEO_HERO_CATEGORY_2: { title: 'WWDC', url: '/tag/WWDC' },
+  HEO_HERO_CATEGORY_3: { title: 'Swift', url: '/tag/Swift' },
 
   // 英雄区右侧推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
   HEO_HERO_RECOMMEND_POST_TAG: '推荐',
