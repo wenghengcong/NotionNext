@@ -2,7 +2,7 @@ import CONFIG from './config'
 import { BlogListPage } from './components/BlogListPage'
 import { BlogListScroll } from './components/BlogListScroll'
 import { useEffect } from 'react'
-import { isBrowser, loadExternalResource } from '@/lib/utils'
+import { isBrowser } from '@/lib/utils'
 import BlogArchiveItem from './components/BlogArchiveItem'
 import { ArticleLock } from './components/ArticleLock'
 import NotionPage from '@/components/NotionPage'
@@ -25,6 +25,7 @@ import { Transition } from '@headlessui/react'
 import { Style } from './style'
 import replaceSearchResult from '@/components/Mark'
 import CommonHead from '@/components/CommonHead'
+import WWAds from '@/components/WWAds'
 
 /**
  * 基础布局
@@ -36,9 +37,6 @@ const LayoutBase = props => {
   const { children, slotTop, meta } = props
   const { onLoading } = useGlobal()
 
-  if (isBrowser) {
-    loadExternalResource('/css/theme-simple.css', 'css')
-  }
   return (
         <div id='theme-simple' className='min-h-screen flex flex-col dark:text-gray-300  bg-white dark:bg-black'>
             {/* SEO相关 */}
@@ -172,7 +170,8 @@ const LayoutSlug = props => {
                 <ArticleInfo post={post} />
 
                 {/* 广告嵌入 */}
-                <AdSlot type={'in-article'} />
+                {/* <AdSlot type={'in-article'} /> */}
+                <WWAds orientation="horizontal" className="w-full" />
 
                 {/* Notion文章主体 */}
                 {!lock && <NotionPage post={post} />}
