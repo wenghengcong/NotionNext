@@ -2,6 +2,7 @@ import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
 import copy from 'copy-to-clipboard'
 import dynamic from 'next/dynamic'
+import { useRouter } from 'next/router'
 import { useState } from 'react'
 
 import {
@@ -56,7 +57,13 @@ const QrCode = dynamic(() => import('@/components/QrCode'), { ssr: false })
  * @param {*} param0
  * @returns
  */
-const ShareButtons = ({ shareUrl, title, body, image }) => {
+const ShareButtons = ({ post }) => {
+  const router = useRouter()
+  const shareUrl = siteConfig('LINK') + router.asPath
+  const title = post.title || siteConfig('TITLE')
+  const image = post.pageCover
+  const body = post?.title + ' | ' + title + ' ' + shareUrl + ' ' + post?.summary
+
   const services = siteConfig('POSTS_SHARE_SERVICES').split(',')
   const titleWithSiteInfo = title + ' | ' + siteConfig('TITLE')
   const { locale } = useGlobal()
@@ -349,7 +356,7 @@ const ShareButtons = ({ shareUrl, title, body, image }) => {
                         <div className='absolute'>
                         <div id='pop' className={(qrCodeShow ? 'opacity-100 ' : ' invisible opacity-0') + ' z-40 absolute bottom-10 -left-10 bg-white shadow-xl transition-all duration-200 text-center'}>
                                 <div className='p-2 mt-1 w-28 h-28'>
-                                    <QrCode value={shareUrl}/>
+                                    { qrCodeShow && <QrCode value={shareUrl}/> }
                                 </div>
                                 <span className='text-black font-semibold p-1 rounded-t-lg text-sm mx-auto mb-1'>
                                     {locale.COMMON.SCAN_QR_CODE}
