@@ -20,8 +20,8 @@ const CONFIG = {
 
   // 英雄区显示三个置顶分类
   HEO_HERO_CATEGORY_1: { title: '我的作品', url: '/tag/作品' },
-  HEO_HERO_CATEGORY_2: { title: 'WWDC', url: '/tag/WWDC' },
-  HEO_HERO_CATEGORY_3: { title: 'Swift', url: '/tag/Swift' },
+  HEO_HERO_CATEGORY_2: { title: 'Swift', url: '/tag/Swift' },
+  HEO_HERO_CATEGORY_3: { title: '精选', url: '/tag/精选' },
 
   // 英雄区右侧推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
   HEO_HERO_RECOMMEND_POST_TAG: '推荐',
@@ -43,10 +43,10 @@ const CONFIG = {
     {
       title_1: 'iOS',
       img_1: '/images/heo/ios.webp',
-      color_1: '#ffffff',
+      color_1: '#000000',
       title_2: 'Xcode',
       img_2: '/images/heo/xcode.png',
-      color_2: '#ffffff'
+      color_2: '#e6e6e6'
     },
     {
       title_1: 'Swift',
@@ -54,7 +54,7 @@ const CONFIG = {
       color_1: '#eb6840',
       title_2: 'Objc',
       img_2: '/images/heo/objc.webp',
-      color_2: '#8f55ba'
+      color_2: '#1a7be4'
     },
     {
       title_1: 'JS',
