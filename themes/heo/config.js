@@ -1,4 +1,7 @@
 const CONFIG = {
+  HEO_HOME_POST_TWO_COLS: true, // 首页博客两列显示，若为false则只显示一列
+  HEO_LOADING_COVER: true, // 页面加载的遮罩动画
+
   HEO_HOME_BANNER_ENABLE: true,
 
   HEO_SITE_CREATE_TIME: '2016-03-20', // 建站日期，用于计算网站运行的第几天
@@ -19,9 +22,11 @@ const CONFIG = {
   HEO_HERO_TITLE_1: '工具方案',
   HEO_HERO_TITLE_2: '与思维认知',
   HEO_HERO_TITLE_3: 'wenghengcong.com',
-  HEO_HERO_TITLE_4: '为你的生活助力',
+  HEO_HERO_TITLE_4: '助力每一步成长',
   HEO_HERO_TITLE_5: '我的作品',
   HEO_HERO_TITLE_LINK: 'https://wenghengcong.com/article/product',
+  // 英雄区遮罩文字
+  HEO_HERO_COVER_TITLE: '随便逛逛',
 
   // 英雄区显示三个置顶分类
   HEO_HERO_CATEGORY_1: { title: '我的作品', url: '/tag/作品' },
@@ -37,8 +42,8 @@ const CONFIG = {
   HEO_INFOCARD_GREETINGS: [
     '🗺️ 探索世界的iOS开发',
     '🔍 充满求知欲',
-    '📚 喜欢看杂书',
-    '🧠 摸索认知与思维',
+    '📚 爱阅读',
+    '🧠 探索认知与思维',
     '🛠️ 工具解决方案爱好者'
   ],
 
@@ -91,6 +96,12 @@ const CONFIG = {
   HEO_SOCIAL_CARD_TITLE_2: '加入我们的社群讨论分享',
   HEO_SOCIAL_CARD_TITLE_3: '点击加入社群',
   HEO_SOCIAL_CARD_URL: 'https://www.wenghengcong.com/share',
+
+  // 底部统计面板文案
+  HEO_POST_COUNT_TITLE: '文章数:',
+  HEO_SITE_TIME_TITLE: '建站天数:',
+  HEO_SITE_VISIT_TITLE: '访问量:',
+  HEO_SITE_VISITOR_TITLE: '访客数:',
 
   // *****  以下配置无效，只是预留开发 ****
   // 菜单配置
